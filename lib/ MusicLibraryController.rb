@@ -99,7 +99,9 @@ class MusicLibraryController
       # binding.pry
       song = Song.all.sort{|a,b| a.name.to_s <=> b.name.to_s}[input.to_i - 1]
       # puts "Which song number would you like to play?"
-     if (song != nil puts "Playing #{song.name} by #{song.artist.name}"
+     if (song != nil)  
+       puts "Playing #{song.name} by #{song.artist.name}" 
+     end
     end
   end
 
