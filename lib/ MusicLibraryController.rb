@@ -97,7 +97,7 @@ class MusicLibraryController
     # sorted_list = self.library.sort_by {|song|song.name}
     if (1..Song.all.length).include?(input.to_i)
       # binding.pry
-      song = Song.all.sort{|a,b| a.name.to_s <=> b.name.to_s}[input.to_i - 1]
+      song = self.library.sort{|a,b| a.name.to_s <=> b.name.to_s}[input.to_i - 1]
       # puts "Which song number would you like to play?"
      if (song != nil)  
        puts "Playing #{song.name} by #{song.artist.name}" 
